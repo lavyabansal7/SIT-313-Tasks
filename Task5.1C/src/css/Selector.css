@@ -1,0 +1,71 @@
+.select {
+  flex-direction: row;
+  height: 30px;
+  width: 1000px;
+  display: flex;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+.but {
+  margin-left: 30px;
+  margin-right: 60px;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  width: 1000px;
+  display: flex;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+.input {
+  font-weight: bold;
+  font-size: 1.2em;
+  word-spacing: 4px;
+  width: 900px;
+  margin-left: 50px;
+}
+
+.problem {
+  font-weight: bold;
+  font-size: 1.2em;
+  word-spacing: 4px;
+  margin-top: 10px;
+  width: 1000px;
+  height: 500px;
+}
+.tags {
+  margin-top: 10px;
+  width: 1000px;
+}
+.pl {
+  margin-top: 30px;
+  border: none;
+  background: rgb(120, 115, 115);
+  border-color: rgb(200, 200, 200);
+  letter-spacing: 1px;
+  width: 150px;
+  margin-right: 0px;
+  float: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.abstract {
+  white-space: pre-wrap;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: justify;
+  height: 100px;
+  width: 1000px;
+}
+.article {
+  white-space: pre-wrap;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: justify;
+  height: 300px;
+  width: 1000px;
+}
