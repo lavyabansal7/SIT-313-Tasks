@@ -8,8 +8,8 @@ const app = express();
 const PORT = 3007;
 
 dotenv.config();
-const EMAIL_USER = 'lavyabansal16@gmail.com'
-const EMAIL_PASS = 'rnnuzxchtgespywk'
+const EMAIL_USER = ''
+const EMAIL_PASS = ''
 
 // Middleware
 app.use(bodyParser.json());
