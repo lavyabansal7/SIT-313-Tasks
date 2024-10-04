@@ -1,0 +1,45 @@
+.footer {
+    background-color: #1bb18e;
+    color: #fff;
+  }
+  
+  .end_form {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 100px;
+  }
+  
+  .end_form_item {
+    flex: 1;
+    padding: 0 20px;
+  }
+  
+  .end_form_item h1 {
+    margin-bottom: 15px;
+  }
+  
+  .end_form_item p {
+    margin: 8px 0;
+  }
+  
+  .form_icon {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .end_form_2 {
+    background-color: rgba(36, 53, 51, 0.347);
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .end_form_3 {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .deakin {
+    text-align: center;
+  }

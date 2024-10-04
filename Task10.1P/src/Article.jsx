@@ -1,0 +1,82 @@
+import React, { Component } from 'react';
+import { Form, Button } from 'semantic-ui-react'
+
+import db from "./firebase"
+import { addDoc, collection } from 'firebase/firestore'
+
+export default class Post extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      filePicked: null,
+      title: "",
+      abstract: "",
+      text: "",
+      image: "",
+      tags: ""
+    };
+  }
+
+  CreateNewArticle = async () => {
+    var date = new Date()
+    const collectionRef = collection(db, 'articles');
+    const payload = {
+      title: this.state.title,
+      abstract: this.state.abstract,
+      text: this.state.text,
+      tags: this.state.tags,
+      creationDate: `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
+    }
+
+    await addDoc(collectionRef, payload);
+
+    this.setState({
+      filePicked: null,
+      title: "",
+      abstract: "",
+      text: "",
+      image: "",
+      tags: ""
+    });
+
+    console.log('Successfully Added Article');
+
+  }
+
+  updateInput = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
+  onFileChange = event => {
+    this.setState({ filePicked: event.target.files[0] });
+  };
+
+  render() {
+    return (
+
+      <Form className="SelectedForm">
+        <div className="formField">
+          <h3 style={{ marginRight: "10px" }}>Title</h3>
+          <input value={this.state.title} name="title" onChange={this.updateInput} placeholder='Enter a descriptive title' />
+        </div>
+
+        <Form.Field style={{ marginTop: "10px" }}>
+          <h3 style={{ marginBottom: "10px" }}>Abstract</h3>
+          <textarea value={this.state.abstract} onChange={this.updateInput} name="abstract" placeholder='Enter a 1 paragraph abstract' />
+        </Form.Field>
+        <Form.Field style={{ marginTop: "10px" }}>
+          <h3 style={{ marginBottom: "10px" }}>Article Text</h3>
+          <textarea value={this.state.text} name="text" onChange={this.updateInput} placeholder='Enter the body of your article' />
+        </Form.Field>
+        <div className="formField">
+          <h3 style={{ marginBottom: "10px", marginRight: "10px", marginTop: "10px" }}>Tags</h3>
+          <input value={this.state.tags} name="tags" onChange={this.updateInput} placeholder='Please add up to 3 tags to descript what your article is about e.g., Java' />
+        </div>
+        <Button style={{ marginTop: "20px", float: "right", width: "170px" }} onClick={this.CreateNewArticle}>Post</Button>
+      </Form>
+    )
+  }
+}

@@ -1,0 +1,34 @@
+/* frontend/src/components/NewsletterSubscription.css */
+/* .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  } */
+  
+  .container h1 {
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #response-message {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
